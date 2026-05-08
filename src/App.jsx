@@ -9,23 +9,27 @@ import Details from './component/Details'
 import Skitls from './component/Skitls'
 import MYWorks from './component/myworks'
 import Footer from './component/Footer'
+import Experience from './component/Experience'
 import Nav from './component/Nav'
 
 const App = () => {
-
-  return (<div id='app' className='overflow-hidden'>
-    <Nav/>
+  return (
+    <div id='app' className='overflow-hidden max-w-[1440px] mx-auto'>
+      <Nav />
     <div className="section-animate">
-      <Details/>
+      <Details />
     </div>
     <div className="section-animate">
-      <Skitls/>
+      <Skitls />
     </div>
     <div className="section-animate">
-      <MYWorks/>
+      <Experience />
     </div>
     <div className="section-animate">
-      <Footer/>
+      <MYWorks />
+    </div>
+    <div className="section-animate">
+      <Footer />
     </div>
   </div>
 

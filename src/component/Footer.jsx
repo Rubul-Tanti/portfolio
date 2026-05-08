@@ -1,178 +1,125 @@
 import React, { useRef } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowRight } from 'react-icons/fa'
 import { FaReact } from "react-icons/fa"
-import { FaCss3Alt } from "react-icons/fa6"
-import { FaJs } from "react-icons/fa"
+import { SiNextdotjs } from "react-icons/si"
 import { RiTailwindCssFill } from "react-icons/ri"
-import { FaHtml5 } from "react-icons/fa"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const footerRef = useRef(null)
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    // Animate footer elements when they come into view
-    gsap.fromTo('#footer-title',
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 80%',
-        },
-        ease: 'power2.out'
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: footerRef.current,
+        start: 'top 85%',
       }
-    )
+    });
 
-    gsap.fromTo('#footer-subtitle',
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 80%',
-        },
-        ease: 'power2.out'
-      }
+    tl.fromTo('.footer-animate', 
+      { y: 50, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' }
     )
-
-    gsap.fromTo('#footer-icons > *',
+    .fromTo('.footer-line',
+      { width: 0 },
+      { width: '100%', duration: 1, ease: 'power3.inOut' },
+      "-=0.6"
+    )
+    .fromTo('.footer-bottom-animate',
       { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.4,
-        stagger: 0.1,
-        delay: 0.4,
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 80%',
-        },
-        ease: 'power2.out'
-      }
-    )
+      { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out' },
+      "-=0.4"
+    );
 
-    gsap.fromTo('#footer-connect',
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 80%',
-        },
-        ease: 'power2.out'
-      }
-    )
-
-    gsap.fromTo('#footer-social > *',
-      { scale: 0, opacity: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-        stagger: 0.1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: 'top 80%',
-        },
-        ease: 'back.out(1.7)'
-      }
-    )
-
-    gsap.fromTo('#footer-copyright',
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: 0.6,
-        scrollTrigger: {
-          trigger: '#footer-divider',
-          start: 'top 90%',
-        },
-        ease: 'power2.out'
-      }
-    )
-
-    gsap.fromTo('#footer-links > *',
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.4,
-        stagger: 0.1,
-        delay: 0.8,
-        scrollTrigger: {
-          trigger: '#footer-divider',
-          start: 'top 90%',
-        },
-        ease: 'power2.out'
-      }
-    )
-  }, [])
+  }, { scope: footerRef })
 
   return (
-    <footer ref={footerRef} id="contact" className="w-full bg-black text-white py-10 mt-20 border-t border-gray-800">
-      <div className="container mx-auto px-4 md:px-10 lg:px-20">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-          <div className="mb-8 md:mb-0">
-            <h2 id="footer-title" className="text-xl md:text-2xl font-fontas uppercase mb-3">Rubul Tanti</h2>
-            <p id="footer-subtitle" className="text-gray-400 text-sm uppercase">Frontend Developer</p>
-            <div id="footer-icons" className="mt-4 flex space-x-3">
-              <FaHtml5 size={20} className="text-gray-400 hover:text-[#E34F26] transition-colors duration-300 cursor-pointer" />
-              <FaCss3Alt size={20} className="text-gray-400 hover:text-[#1572B6] transition-colors duration-300 cursor-pointer" />
-              <FaJs size={20} className="text-gray-400 hover:text-[#F7DF1E] transition-colors duration-300 cursor-pointer" />
-              <FaReact size={20} className="text-gray-400 hover:text-[#61DAFB] transition-colors duration-300 cursor-pointer" />
-              <RiTailwindCssFill size={20} className="text-gray-400 hover:text-[#06B6D4] transition-colors duration-300 cursor-pointer" />
-            </div>
-          </div>
+    <footer ref={footerRef} id="contact" className="w-full bg-black text-white pt-24 pb-8 relative overflow-hidden">
+      
+      {/* Background glow effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-32 bg-[#DAA520] opacity-[0.03] blur-[100px] pointer-events-none"></div>
 
-          <div className="flex flex-col items-center md:items-end">
-            <h3 id="footer-connect" className="text-lg uppercase mb-4 font-medium">Connect with me</h3>
-            <div id="footer-social" className="flex space-x-5">
-              <a href="https://github.com/Rubul-Tanti" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-[#DAA520] transition-all duration-300 hover:scale-110">
-                <FaGithub size={24} />
-              </a>
-              <a href="https://www.linkedin.com/in/rubul-tanti-213a6b2b5" target="_blank" rel="noopener noreferrer"
-                className="text-white hover:text-[#DAA520] transition-all duration-300 hover:scale-110">
-                <FaLinkedin size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div id="footer-divider" className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p id="footer-copyright" className="text-gray-400 text-sm mb-6 md:mb-0 uppercase">
-              &copy; {currentYear} Rubul Tanti. All rights reserved.
+      <div className="container mx-auto px-6 md:px-12 lg:px-24">
+        
+        {/* Main CTA Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-10">
+          <div className="max-w-3xl footer-animate">
+            <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-black uppercase tracking-tighter leading-[0.9] mb-6">
+              Let's build <br/> <span className="text-[#DAA520] font-name font-normal lowercase tracking-normal">something great.</span>
+            </h2>
+            <p className="text-zinc-400 text-sm md:text-base max-w-md font-medium leading-relaxed">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
-            <div id="footer-links" className="flex space-x-8">
-              <a href="#home" className="text-gray-400 hover:text-[#DAA520] text-sm uppercase transition-all duration-300 hover:-translate-y-1">
-                Home
+          </div>
+          
+          <div className="footer-animate flex flex-col items-start lg:items-end gap-4 w-full lg:w-auto">
+             <a href="https://www.linkedin.com/in/rubul-tanti-213a6b2b5" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between w-full lg:w-auto gap-6 bg-zinc-900 border border-zinc-800 rounded-full pl-6 pr-2 py-2 hover:bg-[#DAA520] hover:border-[#DAA520] transition-all duration-500">
+                <span className="text-sm md:text-base font-bold uppercase tracking-wider group-hover:text-black transition-colors">Start a Conversation</span>
+                <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white transition-transform duration-500 group-hover:rotate-45">
+                  <FaArrowRight />
+                </div>
+             </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="w-full h-[1px] bg-zinc-800 mb-16 footer-line"></div>
+
+        {/* Links & Socials */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          
+          <div className="md:col-span-6 footer-bottom-animate space-y-4">
+            <h3 className="text-2xl font-fontas uppercase font-black tracking-tighter">Rubul Tanti</h3>
+            <p className="text-[#DAA520] text-sm uppercase font-bold tracking-[0.2em]">Full Stack Developer</p>
+          </div>
+
+          <div className="md:col-span-3 footer-bottom-animate space-y-5">
+            <h4 className="text-[10px] text-zinc-500 uppercase tracking-[0.3em] font-black">Navigation</h4>
+            <div className="flex flex-col space-y-3">
+              <a href="#home" className="text-zinc-300 hover:text-[#DAA520] w-fit transition-colors uppercase text-xs tracking-wider font-semibold">Home</a>
+              <a href="#skills" className="text-zinc-300 hover:text-[#DAA520] w-fit transition-colors uppercase text-xs tracking-wider font-semibold">Skills</a>
+              <a href="#experience" className="text-zinc-300 hover:text-[#DAA520] w-fit transition-colors uppercase text-xs tracking-wider font-semibold">Experience</a>
+              <a href="#works" className="text-zinc-300 hover:text-[#DAA520] w-fit transition-colors uppercase text-xs tracking-wider font-semibold">Works</a>
+            </div>
+          </div>
+
+          <div className="md:col-span-3 footer-bottom-animate space-y-5">
+            <h4 className="text-[10px] text-zinc-500 uppercase tracking-[0.3em] font-black">Connect</h4>
+            <div className="flex gap-4">
+              <a href="https://github.com/Rubul-Tanti" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
+                <FaGithub size={18} />
               </a>
-              <a href="#works" className="text-gray-400 hover:text-[#DAA520] text-sm uppercase transition-all duration-300 hover:-translate-y-1">
-                My Works
+              <a href="https://www.linkedin.com/in/rubul-tanti-213a6b2b5" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
+                <FaLinkedin size={18} />
               </a>
-              <a href="#skills" className="text-gray-400 hover:text-[#DAA520] text-sm uppercase transition-all duration-300 hover:-translate-y-1">
-                Skills
+              <a href="mailto:rubultanti00@gmail.com" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
+                <FaEnvelope size={18} />
               </a>
             </div>
           </div>
+
         </div>
+
+        {/* Bottom Copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-zinc-900 footer-bottom-animate gap-4 md:gap-0">
+          <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">
+            &copy; {currentYear} Rubul Tanti. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4">
+             <span className="text-zinc-600 text-[10px] uppercase font-bold tracking-[0.2em]">Built with</span>
+             <div className="flex items-center gap-3 text-zinc-400">
+               <FaReact size={14} className="hover:text-[#61DAFB] transition-colors" />
+               <SiNextdotjs size={14} className="hover:text-white transition-colors" />
+               <RiTailwindCssFill size={14} className="hover:text-[#06B6D4] transition-colors" />
+             </div>
+          </div>
+        </div>
+
       </div>
     </footer>
   )

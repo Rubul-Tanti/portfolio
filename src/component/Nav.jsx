@@ -33,7 +33,7 @@ const Nav = () => {
   }, [])
 
   return (
-    <div className={`fixed top-0 w-full z-20 transition-all duration-300 ${scrolled ? ' ' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 w-full max-w-[1440px] mx-auto z-20 transition-all duration-300 ${scrolled ? ' ' : 'bg-transparent'}`}>
       <nav>
         <div className='w-full h-24 text-center flex justify-between px-[5vw] py-[2vh] items-center'>
           <a id="nav-logo" href='#home' className={`uppercase text-xs flex flex-col border-b ${scrolled ? 'border-white text-white' : 'border-black text-black'}`}>
@@ -42,8 +42,9 @@ const Nav = () => {
 
           <div id="nav-links" className='flex items-center space-x-8'>
             <a href='#home' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Home</a>
-            <a href='#works' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Works</a>
             <a href='#skills' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Skills</a>
+            <a href='#experience' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Experience</a>
+            <a href='#works' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Works</a>
             <a href='#contact' className={`text-sm uppercase hover:text-[#DAA520] transition-colors ${scrolled ? 'text-white' : 'text-black'}`}>Contact</a>
           </div>
         </div>
