@@ -4,11 +4,6 @@ import cryptoworld from "../data/cryptoworld.png"
 import workmanagementsystemmobile from "../../public/arogya-mobile.png"
 import cryptoworldmobile from "../data/cryptoworldmobile.png"
 
-// Using existing images as placeholders for new projects
-import kindpot from "../../public/kindpot-desktop.png"
-import kindpotmobile from "../../public/kindpot-mobile.png"
-import liveclass from "../../public/study-sync-desktop.png"
-import liveclassmobile from "../../public/study-sync-mobile.png"
 
 import { RiGeminiFill, RiTailwindCssFill } from "react-icons/ri";
 import { FaReact, FaCss3Alt, FaJs, FaHtml5, FaBootstrap, FaGithub, FaNode, FaExternalLinkAlt } from "react-icons/fa";
@@ -24,8 +19,8 @@ const projectsData = [
     id: 1,
     title: "KindPot Platform",
     categories: ["Full Stack", "Backend"],
-    image: kindpot,
-    mobileImage: kindpotmobile,
+    image: "/kindpot-desktop.png",
+    mobileImage: "/kindpot-mobile.png",
     link: "https://kind-pot.vercel.app",
     repo: "https://github.com/Rubul-Tanti/KindPot",
     used: [
@@ -47,8 +42,8 @@ const projectsData = [
     id: 2,
     title: "Study Sync",
     categories: ["Full Stack", "Backend"],
-    image: liveclass,
-    mobileImage: liveclassmobile,
+    image: "/study-sync-desktop.png",
+    mobileImage: "/study-sync-mobile.png",
     link: "https://study-sync-sooty-seven.vercel.app",
     repo: "https://github.com/Rubul-Tanti/StudySync",
     used: [
@@ -70,8 +65,8 @@ const projectsData = [
     id: 3,
     title: "Arogya",
     categories: ["Full Stack", "Frontend", "Backend"],
-    image: workmanagementsystem,
-    mobileImage: workmanagementsystemmobile,
+    image: "/arogya-desktop.png",
+    mobileImage: "/arogya-mobile.png",
     link: "https://arogya-frontend-eta.vercel.app",
     repo: "https://github.com/Rubul-Tanti/Arogya-frontend-",
     used: [
