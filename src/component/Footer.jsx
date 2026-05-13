@@ -97,7 +97,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/rubul-tanti-213a6b2b5" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
                 <FaLinkedin size={18} />
               </a>
-              <a href="mailto:rubultanti00@gmail.com" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
+              <a href="mailto:rubultanti440@gmail.com" className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all duration-300 hover:-translate-y-1">
                 <FaEnvelope size={18} />
               </a>
             </div>
