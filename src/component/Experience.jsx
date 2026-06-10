@@ -44,7 +44,7 @@ const Experience = () => {
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
             <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Frontend Developer Intern</h2>
             <div className='flex items-center gap-3'>
-              <img src="https://media.licdn.com/dms/image/v2/D560BAQEUxzSqdx-hEg/company-logo_200_200/B56Z0ZWzasH8AM-/0/1774246902141/algobeat_logo?e=1779926400&v=beta&t=qQcfOrQSAFr6HRYJphGGKarr9_4yULn7ZvP_4QbGrQE" alt="PRNK INFOTECH Logo" className='w-10 h-10 shadow-sm rounded-full' />
+              <img src="data:image/webp;base64,UklGRjwBAABXRUJQVlA4IDABAAAwBgCdASogACAAPtEutFooIagoGAEAGglsABwNxM0aQAuP/14My+3oqVYGXfZ4nJJoNVIPBvARs7VgAM4//cvx3ILG/hfMGgo1u6aSAxmEIO7tyedIlXb9c/6ruMg/i0VN17ULuvhCQXgnXesLQ/PlFkf//qmf+6a6r/OjALyHFNlGZo9+tH2ysvp6L9ojfmFi5qv4rb8BxI7FV9DJnUOpFrKwi7Q3bOKCAzw2AGwvJ6VS83hv//VM/9+36g/GiChNWaHS8DoNKMf+DObNLpJIKiBm/xExfXmMEs1Qfsjj4BEDoejbf80F40eQbF6F8Gp7/pM/ZicewTrGHTPN6P++bU+LHBokXDvWQbD/pjQWsPvwYufgsa+fEZmc4i6qBpj4cEaVI954ePXrmDEG9IAA" alt="PRNK INFOTECH Logo" className='w-10 h-10 shadow-sm rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>PRNK INFOTECH LLP</h3>
             </div>
             <ul className='list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2'>
