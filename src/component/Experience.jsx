@@ -63,7 +63,7 @@ const Experience = () => {
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
             <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Web Developer Intern</h2>
             <div className='flex items-center gap-3'>
-              <img src="https://media.licdn.com/dms/image/v2/D560BAQFWILaMxgLvEA/company-logo_200_200/company-logo_200_200/0/1724759254608?e=1779926400&v=beta&t=-QH0uuBlFXMM0SSaIQAZnahd_Vb3LBtDtk99D6NH-tk" alt="GOIT PRIVATE Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
+              <img src="https://pb.turn2web.com/site/turn2web/assets/img/logo.jpg" alt="GOIT PRIVATE Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>Turn2 Web</h3>
             </div>
             <ul className='list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2'>
