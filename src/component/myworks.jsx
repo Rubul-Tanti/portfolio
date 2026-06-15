@@ -7,12 +7,14 @@ import cryptoworldmobile from "../data/cryptoworldmobile.png"
 
 import { RiGeminiFill, RiTailwindCssFill } from "react-icons/ri";
 import { FaReact, FaCss3Alt, FaJs, FaHtml5, FaBootstrap, FaGithub, FaNode, FaExternalLinkAlt } from "react-icons/fa";
-import { SiRedux, SiNextdotjs, SiTypescript, SiPostgresql, SiPrisma, SiRedis, SiExpress, SiMongodb, SiSocketdotio, SiFramer, SiJsonwebtokens } from "react-icons/si";
+import { SiRedux, SiNextdotjs, SiTypescript, SiPostgresql, SiPrisma, SiRedis, SiExpress, SiMongodb, SiSocketdotio, SiFramer, SiJsonwebtokens, SiVite, SiZod, SiStripe } from "react-icons/si";
 import { IoIosGitBranch } from "react-icons/io";
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import AnimatedTitle from './AnimatedTitle'
+import { BiChevronDown } from 'react-icons/bi'
+import { CgChevronUp } from 'react-icons/cg'
 
 const projectsData = [
   {
@@ -27,15 +29,52 @@ const projectsData = [
       { name: "Next.js", icon: SiNextdotjs },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Node.js", icon: FaNode },
+      { name: "Express", icon: SiExpress },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "Prisma", icon: SiPrisma },
       { name: "Redis", icon: SiRedis },
+      { name: "Stripe", icon: SiStripe },
+      { name: "Zod", icon: SiZod },
     ],
-    desc: "A premium subscription-based platform combining golf performance tracking, charitable giving, and an automated monthly prize draw engine.",
+    desc: "Premium subscription platform for golf performance tracking via Stableford scoring, automated monthly prize draws, and charitable contributions with Stripe payments, Redis caching, and enterprise-grade security.",
     features: [
-      "Engineered a robust subscription and payment system with Stripe integration.",
-      "Developed a 5-score rolling Stableford management system with custom algorithmic draw logic.",
-      "Integrated seamless charity contribution tracking with dedicated user and admin dashboards."
+      "Secure Stripe subscription management with JWT authentication and role-based access control.",
+      "Advanced 5-score rolling Stableford handicap system with custom algorithmic calculation and trending.",
+      "Automated monthly prize draw engine with intelligent winner selection and email notifications.",
+      "Real-time charity contribution tracking with aggregated impact metrics and admin dashboards.",
+      "Express rate limiting with Redis caching, session management, and comprehensive Zod validation.",
+      "PostgreSQL with Prisma ORM for robust data relationships and Winston logging for monitoring."
+    ]
+  },
+  {
+    id: 4,
+    title: "Tanti",
+    categories: ["Full Stack", "Backend"],
+    image: "/Tanti.png",
+    mobileImage: "/mobileTanti.png",
+    link: "https://ecom-tanti-73xj.vercel.app/",
+    repo: "https://github.com/Rubul-Tanti/Ecom_Tanti",
+    used: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Node.js", icon: FaNode },
+      { name: "Express", icon: SiExpress },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "Tailwind", icon: RiTailwindCssFill },
+      { name: "Framer Motion", icon: SiFramer },
+      { name: "TanStack Query", icon: FaReact },
+      { name: "Razorpay", icon: FaJs },
+      { name: "Zod", icon: SiZod },
+    ],
+    desc: "Full-stack e-commerce platform with secure Razorpay payments, real-time inventory management, dynamic promo codes, comprehensive order tracking, and an intuitive admin dashboard.",
+    features: [
+      "Secure JWT authentication with role-based access control and Zod validation.",
+      "Complete product and inventory management with real-time stock tracking.",
+      "Advanced shopping cart with dynamic promo codes and discount calculations.",
+      "Integrated Razorpay payment gateway for secure transactions.",
+      "Comprehensive order management with status tracking and fulfillment workflow.",
+      "Responsive UI with Next.js, Tailwind CSS, Framer Motion animations, and TanStack Query caching."
     ]
   },
   {
@@ -53,15 +92,15 @@ const projectsData = [
       { name: "MongoDB", icon: SiMongodb },
       { name: "WebRTC", icon: FaJs },
     ],
-    desc: "StudySync is an interactive online learning platform that connects students and teachers for seamless learning experiences. It features live classrooms, real-time chat, and personalized lessons, making learning engaging, flexible, and accessible anytime, anywhere.",
+    desc: "Interactive e-learning platform featuring live video classrooms via WebRTC, real-time chat collaboration, secure tutor booking, and seamless payment processing.",
     features: [
-      "E-learning platform using LiveKit (WebRTC) for video classrooms and screen sharing.",
-      "Real-time chat functionality using Socket.io.",
-      "Secure tutor hiring flow with session booking and role-based access control.",
-      "Secure payment handling and authentication via JWT."
+      "Live video classrooms and screen sharing using LiveKit (WebRTC).",
+      "Real-time chat functionality with Socket.io for instant communication.",
+      "Secure tutor booking with role-based access control and JWT authentication.",
+      "Seamless payment processing with comprehensive session management."
     ]
   },
-  {
+    {
     id: 3,
     title: "Arogya",
     categories: ["Full Stack", "Frontend", "Backend"],
@@ -81,33 +120,34 @@ const projectsData = [
       { name: "Framer Motion", icon: SiFramer },
       { name: "JWT", icon: SiJsonwebtokens }
     ],
-    desc: "A modern web-based healthcare platform designed to simplify and enhance access to health services.",
+    desc: "Healthcare platform with real-time blood donation matching, instant WebSocket-based emergency SOS alerts, JWT authentication, Redis caching, and comprehensive donor/patient management.",
     features: [
-      "Engineered a full-stack platform with real-time blood donation matching and WebSocket-based emergency SOS alert system.",
-      "Implemented JWT + RBAC authentication, Redis caching, and MongoDB indexing, improving API response times significantly."
+      "Real-time blood donation matching with WebSocket-based emergency SOS alert system.",
+      "JWT + RBAC authentication with Redis caching and MongoDB indexing for optimized performance."
     ]
   },
+
   {
-    id: 5,
-    title: "crypto world",
+    id: 6,
+    title: "Elementum Landing Page",
     categories: ["Frontend"],
-    image: cryptoworld,
-    mobileImage: cryptoworldmobile,
-    link: "https://rubul-tanti.github.io/crypto-world/",
-    repo: "https://github.com/Rubul-Tanti/crypto-world",
+    image: "/elementum-desktop.png",
+    mobileImage: "/elementum-mobile.png",
+    link: "https://assigment-lac.vercel.app/",
+    repo: "https://github.com/Rubul-Tanti/Elementum-Langing-page",
     used: [
-      { name: "html", icon: FaHtml5 },
-      { name: "css", icon: FaCss3Alt },
-      { name: "javascript", icon: FaJs },
-      { name: "react", icon: FaReact },
-      { name: "tailwind", icon: RiTailwindCssFill },
-      { name: "redux", icon: SiRedux },
+      { name: "React", icon: FaReact },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Vite", icon: SiVite },
+      { name: "Tailwind", icon: RiTailwindCssFill },
+      { name: "Framer Motion", icon: SiFramer },
     ],
-    desc: "I created a cryptocurrency info website.",
+    desc: "Modern responsive landing page with captivating Framer Motion animations, built with React, TypeScript, Vite, and Tailwind for blazing-fast performance.",
     features: [
-      "View detailed information about the latest cryptocurrencies.",
-      "Stay updated with real-time news and updates from the crypto world.",
-      "Explore market trends and individual coin data through a clean, user-friendly interface."
+      "Fully responsive design that works seamlessly across all devices.",
+      "Smooth animations and transitions using Framer Motion.",
+      "Modern tech stack: React, TypeScript, Vite, and Tailwind CSS.",
+      "Fast performance with TypeScript type safety and clean codebase."
     ]
   }
 ];
@@ -117,10 +157,21 @@ const filters = ["All", "Frontend", "Backend", "Full Stack"];
 const MYWorks = () => {
   const worksRef = useRef(null);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [expandedProjects, setExpandedProjects] = useState({});
 
   const filteredProjects = activeFilter === "All"
     ? projectsData
     : projectsData.filter(project => project.categories.includes(activeFilter));
+
+  const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 3);
+
+  const toggleProjectExpand = (id) => {
+    setExpandedProjects(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -187,7 +238,7 @@ const MYWorks = () => {
       })
     })
 
-  }, [activeFilter]) // Re-run animation logic when filter changes
+  }, [activeFilter, showAllProjects]) // Re-run animation logic when filter or showAllProjects changes
 
   return (
     <section ref={worksRef} id="works" className='flex flex-col gap-2 min-h-screen pt-10'>
@@ -213,7 +264,7 @@ const MYWorks = () => {
         ))}
       </div>
 
-      {filteredProjects.map((project, index) => {
+      {displayedProjects.map((project, index) => {
         const isReversed = index % 2 !== 0;
 
         return (
@@ -261,7 +312,7 @@ const MYWorks = () => {
 
               <div className='text-xl md:text-2xl font-semibold uppercase mb-4'>
                 WHAT I MADE
-                <div className='pl-2 text-sm md:text-base text-gray-500 space-y-2 mt-2'>
+                <div className={`pl-2 text-sm md:text-base text-gray-500 space-y-2 mt-2 transition-all duration-300 ${!expandedProjects[project.id] && 'md:block hidden'}`}>
                   <p>{project.desc}</p>
                   <h3 className='uppercase font-medium text-black'>Key features include:</h3>
                   <ul className='list-disc pl-4 text-sm'>
@@ -270,11 +321,47 @@ const MYWorks = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* Mobile Collapsed View */}
+                <div className={`md:hidden pl-2 text-sm text-gray-500 space-y-2 mt-2 ${expandedProjects[project.id] ? 'block' : 'block'}`}>
+                  {expandedProjects[project.id] ? (
+                    <>
+                      <p>{project.desc}</p>
+                      <h3 className='uppercase font-medium text-black mt-3'>Key features include:</h3>
+                      <ul className='list-disc pl-4 text-sm'>
+                        {project.features.map((feat, i) => (
+                          <li key={i}>{feat}</li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <p className='line-clamp-2'>{project.desc}</p>
+                  )}
+                </div>
+
+                {/* Expand/Collapse Button - Mobile Only */}
+                <button
+                  onClick={() => toggleProjectExpand(project.id)}
+                  className='md:hidden mt-6 w-8 h-8 mx-auto rounded-full flex items-center justify-center  text-[#DAA520] border-2 border-[#DAA520] hover:shadow-[0_8px_20px_rgba(218,165,32,0.3)] transition-all duration-300 group hover:scale-110'
+                >
+                  {expandedProjects[project.id] ? <CgChevronUp size={24} className='group-hover:-translate-y-1 transition-transform duration-300'/> : <BiChevronDown size={24} className='group-hover:translate-y-1 transition-transform duration-300'/>}
+                </button>
               </div>
             </div>
           </div>
         );
       })}
+
+      {filteredProjects.length > 3 && (
+        <div className='flex justify-center py-10'>
+          <button
+            onClick={() => setShowAllProjects(!showAllProjects)}
+            className='px-8 py-3 rounded-full text-sm tracking-[0.2em] font-black uppercase transition-all duration-500 bg-black text-[#DAA520] shadow-[0_10px_30px_rgba(218,165,32,0.3)] hover:scale-105'
+          >
+            {showAllProjects ? 'Show Less Projects' : 'Show More Projects'}
+          </button>
+        </div>
+      )}
     </section>
   )
 }
