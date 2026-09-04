@@ -152,7 +152,7 @@ const SkillsAndAbout = () => {
             <div className='text-center lg:text-right space-y-4'>
               <h2 className='text-3xl font-black uppercase tracking-tighter'>About Me</h2>
               <p className='text-zinc-500 text-sm md:text-base leading-relaxed font-medium'>
-                Self-taught Developer & BCA Dropout. I specialize in the JavaScript ecosystem,
+                 I specialize in the JavaScript ecosystem,
                 architecting robust backends and interactive frontends. Currently focused on
                 integrating AI agents into production workflows and exploring robotics.
                 I build for performance, scale, and the sheer joy of solving complex problems.
