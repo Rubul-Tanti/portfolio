@@ -42,7 +42,7 @@ const Experience = () => {
             Jul 2024 - Jan 2025
           </div>
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
-            <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Frontend Developer Intern</h2>
+            <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Frontend Developer </h2>
             <div className='flex items-center gap-3'>
               <img src="data:image/webp;base64,UklGRjwBAABXRUJQVlA4IDABAAAwBgCdASogACAAPtEutFooIagoGAEAGglsABwNxM0aQAuP/14My+3oqVYGXfZ4nJJoNVIPBvARs7VgAM4//cvx3ILG/hfMGgo1u6aSAxmEIO7tyedIlXb9c/6ruMg/i0VN17ULuvhCQXgnXesLQ/PlFkf//qmf+6a6r/OjALyHFNlGZo9+tH2ysvp6L9ojfmFi5qv4rb8BxI7FV9DJnUOpFrKwi7Q3bOKCAzw2AGwvJ6VS83hv//VM/9+36g/GiChNWaHS8DoNKMf+DObNLpJIKiBm/xExfXmMEs1Qfsjj4BEDoejbf80F40eQbF6F8Gp7/pM/ZicewTrGHTPN6P++bU+LHBokXDvWQbD/pjQWsPvwYufgsa+fEZmc4i6qBpj4cEaVI954ePXrmDEG9IAA" alt="PRNK INFOTECH Logo" className='w-10 h-10 shadow-sm rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>PRNK INFOTECH LLP</h3>
