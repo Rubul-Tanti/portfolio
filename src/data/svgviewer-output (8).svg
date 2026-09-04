@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="100%" height="100%">
+  <defs>
+    
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      <stop offset="100%" stop-color="#FF6B35"></stop>
+    </linearGradient>
+
+    
+    <linearGradient id="arcGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff"></stop>
+      <stop offset="50%" stop-color="#fff"></stop>
+      
+    </linearGradient>
+
+    
+    <radialGradient id="dotGradient" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"></stop>
+      
+    </radialGradient>
+  </defs>
+
+  <style>
+    .dark-stroke {
+      stroke: #fff;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .dark-fill {
+      fill: #081726;
+    }
+  </style>
+
+  
+  <rect width="1000" height="1000" fill="url(#bgGlow)"></rect>
+
+  
+  <path d="M 163,380A 155,155 0 1,1 405,236" fill="none" stroke="url(#arcGradient)" stroke-width="53" stroke-linecap="round"></path>
+<rect width="86" height="180" fill="#fff" transform="translate(320 420) rotate(-35)"></rect>
+
+  
+  <circle cx="405" cy="325" r="36" fill="url(#dotGradient)"></circle>
+  <circle cx="255" cy="255" r="70" fill="url(#dotGradient)"></circle>
+
+  
+  
+  
+</svg>
