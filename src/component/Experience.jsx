@@ -46,9 +46,7 @@ const Experience = () => {
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
             <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Founding Backend Developer</h2>
             <div className='flex items-center gap-3'>
-              <div className='w-10 h-10 shadow-sm rounded-full bg-[#DAA520] flex items-center justify-center text-black font-bold text-sm'>
-                SS
-              </div>
+               <img src="https://res-console.cloudinary.com/ddfvhrbfs/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/c3Zndmlld2VyLW91dHB1dF84X3RvcnJvMA==/template_primary" alt="shift Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>ShiftSwipe</h3>
             </div>
             <ul className='list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2'>
@@ -84,7 +82,7 @@ const Experience = () => {
             May 2025 - Jul 2025
           </div>
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
-            <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Web Developer</h2>
+            <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Web Developer intern</h2>
             <div className='flex items-center gap-3'>
               <img src="https://pb.turn2web.com/site/turn2web/assets/img/logo.jpg" alt="GOIT Private Limited Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>GOIT Private Limited</h3>
