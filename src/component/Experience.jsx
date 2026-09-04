@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import AnimatedTitle from './AnimatedTitle'
-
+import shiftLogo from "../data/svgviewer-output(8).svg"
 const Experience = () => {
   const expRef = useRef(null)
 
@@ -46,7 +46,7 @@ const Experience = () => {
           <div className='w-full md:w-2/3 flex flex-col gap-3'>
             <h2 className='text-2xl md:text-3xl uppercase font-fontas'>Founding Backend Developer</h2>
             <div className='flex items-center gap-3'>
-               <img src="https://res-console.cloudinary.com/ddfvhrbfs/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/c3Zndmlld2VyLW91dHB1dF84X3RvcnJvMA==/template_primary" alt="shift Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
+               <img src="shiftLogo" alt="shift Logo" className='w-10 h-10 shadow-sm border border-[#DAA520] rounded-full' />
               <h3 className='text-xl text-[#DAA520] uppercase font-semibold'>ShiftSwipe</h3>
             </div>
             <ul className='list-disc pl-5 text-gray-400 text-sm md:text-base space-y-2'>
